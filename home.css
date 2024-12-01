@@ -1,0 +1,49 @@
+.Header-div {
+  display: flex;                     /* Use flexbox for layout */
+  justify-content: center;           /* Center elements horizontally */
+  align-items: center;               /* Vertically center elements */
+  height: 120px;                     /* Set a height for the container */
+  background-color: #550000;
+}
+
+.Header-div img {   
+  width: 100px;             /* Add some space between the logo and the Home text */
+}
+
+.Home {
+  text-align: center;                /* Center the text horizontally */
+  flex-grow: 1;                       /* Allow the Home div to take up available space */
+  display: flex;                     /* Use flex for centering the text */
+  justify-content: center;           /* Center horizontally */
+}
+
+h1 {
+  margin: 0;                          /* Remove any default margin from h1 */
+  color: white;
+}
+
+.Buttons {
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;        
+  justify-content: center;   
+  margin-top: 10%;
+}
+
+
+.Buttons button {
+  width: 350px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #550000;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;  /* Optional: Adds space between buttons if you have more than one */
+}
+
+.Buttons button:hover {
+  background-color: #700000; /* Optional: Hover effect */
+}
