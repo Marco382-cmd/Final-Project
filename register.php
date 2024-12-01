@@ -24,9 +24,8 @@ if (isset($_POST['signUp'])) {
         $insertQuery = "INSERT INTO users(firstName, lastName, email, password) 
                         VALUES ('$firstName', '$lastName', '$email', '$password')";
         if ($conn->query($insertQuery) === TRUE) {
-            // Redirect to homepage after successful sign-up
-            header("Location: homepage.php");
-            exit(); // Make sure script stops executing after redirect
+            // Set success message and stay on the same page
+            $Signupmessage = "Sign Up Successful!";
         } else {
             echo "Error: " . $conn->error;
         }
@@ -46,7 +45,7 @@ if (isset($_POST['signIn'])) {
         session_start();
         $row = $result->fetch_assoc();
         $_SESSION['email'] = $row['email'];
-        header("Location: homepage.php");
+        header("Location: home.html");
         exit(); // Ensure script stops after redirect
     } else {
         $Signinmessage = "Incorrect Email or Password!";
