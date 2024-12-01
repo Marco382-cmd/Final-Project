@@ -9,8 +9,7 @@
 .Header-div img {   
   width: 100px;             /* Add some space between the logo and the Home text */
 }
-
-.Home {
+.page-title {
   text-align: center;                /* Center the text horizontally */
   flex-grow: 1;                       /* Allow the Home div to take up available space */
   display: flex;                     /* Use flex for centering the text */
