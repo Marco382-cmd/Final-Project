@@ -24,12 +24,14 @@ if (isset($_POST['signUp'])) {
         $insertQuery = "INSERT INTO users(firstName, lastName, email, password) 
                         VALUES ('$firstName', '$lastName', '$email', '$password')";
         if ($conn->query($insertQuery) === TRUE) {
-            // Set success message and stay on the same page
+            // Set success message 
             $Signupmessage = "Sign Up Successful!";
+            
         } else {
             echo "Error: " . $conn->error;
         }
     }
+   
 }
 
 // Check if the form was submitted for sign-in

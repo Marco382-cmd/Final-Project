@@ -40,7 +40,7 @@
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
             </div>
-            <input type="submit" class="btn" value="Sign Up" name="signUp">
+            <input type="submit" class="btn" value="Sign Up" name="signUp" id="ButtonSignin">
         </form>
         <p class="or">----------or--------</p>
         <div class="icons">
