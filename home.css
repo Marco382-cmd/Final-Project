@@ -48,7 +48,7 @@ h1 {
   font-size: 18px;
   cursor: pointer;
   text-align: center;
-  margin: 10px;
+  margin: 15px;
 }
 
 .Buttons button:hover {
@@ -95,7 +95,7 @@ h1 {
     font-size: 18px;
   }
 
-  .Buttons button {
+  .buttonss {
     width: 80%;  /* Button width stays at 80% of the screen */
     height: 60px;  /* Keep consistent height */
     font-size: 14px;  /* Smaller font size for very small screens */
