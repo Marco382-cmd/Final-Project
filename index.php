@@ -31,6 +31,11 @@
                 <label for="lName">Last Name</label>
             </div>
             <div class="input-group">
+            <i class="fas fa-user"></i>
+                <input type="text" name="student_number" id="student_number" placeholder="Student Number" required>
+                <label for="student_number">Student Number</label>
+            </div>
+            <div class="input-group">
                 <i class="fas fa-envelope"></i>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <label for="email">Email</label>
