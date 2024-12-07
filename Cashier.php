@@ -18,8 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the query
         if ($conn->query($sql) === TRUE) {
-            // Redirect or show a success message
-            echo "<script>alert('You have been added to the queue!'); window.location.href = 'home.html';</script>";
+            // Redirect to cashierconfirmation.php with the form data
+            header("Location: cashierconfirmation.php?tuition=$tuition&other=$other&amount=$amount");
+            exit(); // Ensure the rest of the script doesn't execute
         } else {
             echo "<script>alert('Error: " . $conn->error . "');</script>";
         }

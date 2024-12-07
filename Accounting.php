@@ -18,8 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the query
         if ($conn->query($sql) === TRUE) {
-            // Redirect or show a success message
-            echo "<script>alert('You have been added to the queue!'); window.location.href = 'home.html';</script>";
+            // Redirect to Accounting Confirmation Page
+            header('Location: Accountingconfirmation.php?inquire=' . urlencode($inquire) . '&course=' . urlencode($course) . '&certification=' . urlencode($certification));
+            exit();
         } else {
             echo "<script>alert('Error: " . $conn->error . "');</script>";
         }

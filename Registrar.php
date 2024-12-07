@@ -25,8 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the query for admin table
         if ($conn->query($sql) === TRUE) {
-            // Redirect to home page after successful submission
-            echo "<script>alert('You have been added to the queue!'); window.location.href = 'home.html';</script>";
+            // Get the last inserted ID
+            $last_id = $conn->insert_id;
+
+            // Redirect to homepage.php with the queue ID and selected transactions as URL parameters
+            $transactions_str = urlencode($registrar_transactions);
+            header("Location: Registrarconfirmation.php?id=$last_id&transactions=$transactions_str");
+            exit();
         } else {
             echo "<script>alert('Error: " . $conn->error . "');</script>";
         }
